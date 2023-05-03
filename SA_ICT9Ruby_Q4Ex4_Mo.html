@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ICT | Exercise 4</title>
+
+	<style>
+
+			h1 {
+			text-align: center;
+			text-decoration: overline;
+			text-decoration: underline;  
+			font-family: 'EB Garamond', serif;
+
+		}
+		button {
+			border-radius: 15px;
+			font-family: 'EB Garamond', serif;
+			color: hotpink;
+		}
+		body {
+			color: white;
+			background-color: skyblue;
+			text-align: center;
+			font-family: 'EB Garamond', serif;
+		}
+		
+	</style>
+</head>
+<body style="background-image:url(https://static.vecteezy.com/system/resources/previews/012/051/633/original/simple-aesthetic-black-abstract-background-various-shapes-and-monochrome-color-suitable-for-poster-and-banner-vector.jpg);">
+
+<h1>Calculator Mo</h1>
+
+<h2>Mass Converter</h2>
+
+
+  <label>Input Grams</label>
+  <input id="inputgrams" type="number" placeholder="Input Grams" oninput="MassConverter(this.value)" onchange="MassConverter(this.value)">
+</p>
+
+
+<p>Kilograms: <span id="outputKilogramsValue"></span></p>
+<p>Hectograms: <span id="outputHectogramsValue"></span></p>
+<p>Decagrams: <span id="outputDecagramsValue"></span></p>
+<p>Decigrams: <span id="outputDecigramsValue"></span></p>
+<p>Centigrams: <span id="outputCentigramsValue"></span></p>
+<p>Milligrams: <span id="outputMilligramsValue"></span></p>
+
+<script>
+function MassConverter(valNum) {
+  
+  document.getElementById("outputKilogramsValue").innerHTML=valNum/1000;
+  document.getElementById("outputHectogramsValue").innerHTML=valNum/100;
+  document.getElementById("outputDecagramsValue").innerHTML=valNum/10;
+  document.getElementById("outputDecigramsValue").innerHTML=valNum*10;
+  document.getElementById("outputCentigramsValue").innerHTML=valNum*100;
+  document.getElementById("outputMilligramsValue").innerHTML=valNum*1000;
+}
+</script>
+ 
+ 
+<h2>Length Converter</h2>
+
+<p>
+  <label>Input Meters</label>
+  <input id="inputMeters" type="number" placeholder="Input Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+
+
+<p>Kilometers: <span id="outputKilometersValue"></span></p>
+<p>Hectometer: <span id="outputHectometersValue"></span></p>
+<p>Decameter: <span id="outputDecametersValue"></span></p>
+<p>Decimeter: <span id="outputDecimetersValue"></span></p>
+<p>Centimeters: <span id="outputCentimetersValue"></span></p>
+<p>Millimeters: <span id="outputMilimetersValue"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  
+  document.getElementById("outputKilometersValue").innerHTML=valNum/1000;
+  document.getElementById("outputHectometersValue").innerHTML=valNum/100;
+  document.getElementById("outputDecametersValue").innerHTML=valNum/10;
+  document.getElementById("outputDecimetersValue").innerHTML=valNum*10;
+  document.getElementById("outputCentimetersValue").innerHTML=valNum*100;
+  document.getElementById("outputMilimetersValue").innerHTML=valNum*1000;
+}
+</script>
+
+
+
+
+
+</body>
+</html>
